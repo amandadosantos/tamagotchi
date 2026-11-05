@@ -3,39 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Tamagotchi Virtual</title>
+    <title>Jogo da Velha - Contra o Bot</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="tamagotchi-container">
-        <h1>Tamagotchi</h1>
+    <div class="game-container">
+        <h1>Jogo da Velha</h1>
         
-        <div class="screen">
-            <div id="pet-status-text" class="status-header">Feliz</div>
-            <div id="pet-sprite" class="sprite">🐶</div>
-            
-            <div class="bars">
-                <div class="stat">
-                    <span>Fome:</span>
-                    <div class="bar"><div id="hunger-bar" class="fill"></div></div>
-                </div>
-                <div class="stat">
-                    <span>Felicidade:</span>
-                    <div class="bar"><div id="happiness-bar" class="fill"></div></div>
-                </div>
-                <div class="stat">
-                    <span>Energia:</span>
-                    <div class="bar"><div id="energy-bar" class="fill"></div></div>
-                </div>
-            </div>
+        <div id="status" class="status">Sua vez! (X)</div>
+        
+        <div class="board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
         </div>
 
-        <div class="controls">
-            <button onclick="feedPet()">🍎 Alimentar</button>
-            <button onclick="playWithPet()">⚽ Brincar</button>
-            <button onclick="sleepPet()">💤 Dormir</button>
-            <button onclick="resetPet()">🔄 Reiniciar</button>
-        </div>
+        <button id="restart-btn" onclick="resetGame()">Reiniciar Jogo</button>
     </div>
 
     <script src="script.js"></script>
