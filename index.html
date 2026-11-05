@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Tamagotchi Virtual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tamagotchi-container">
+        <h1>Tamagotchi</h1>
+        
+        <div class="screen">
+            <div id="pet-status-text" class="status-header">Feliz</div>
+            <div id="pet-sprite" class="sprite">🐶</div>
+            
+            <div class="bars">
+                <div class="stat">
+                    <span>Fome:</span>
+                    <div class="bar"><div id="hunger-bar" class="fill"></div></div>
+                </div>
+                <div class="stat">
+                    <span>Felicidade:</span>
+                    <div class="bar"><div id="happiness-bar" class="fill"></div></div>
+                </div>
+                <div class="stat">
+                    <span>Energia:</span>
+                    <div class="bar"><div id="energy-bar" class="fill"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button onclick="feedPet()">🍎 Alimentar</button>
+            <button onclick="playWithPet()">⚽ Brincar</button>
+            <button onclick="sleepPet()">💤 Dormir</button>
+            <button onclick="resetPet()">🔄 Reiniciar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
